@@ -1,0 +1,32 @@
+- id: '1672591769622'
+  alias: En cas d'orage
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.blitzortung_lightning_counter
+    above: 0
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.blitzortung_lightning_distance
+    below: 10
+  action:
+  - service: notify.mobile_app_h70pa2
+    data:
+      message: Attention orage
+      title: Orage en cours
+  mode: single
+- id: '1672765642605'
+  alias: shop_plus
+  description: ''
+  trigger:
+  - platform: event
+    event_type: shopping_list_updated
+    event_data:
+      action: add
+  condition: []
+  action:
+  - service: homeassistant.update_entity
+    data: {}
+    target:
+      entity_id: sensor.shopping_list
+  mode: single

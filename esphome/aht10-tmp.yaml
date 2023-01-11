@@ -1,0 +1,28 @@
+esphome:
+  name: "aht10-tmp"
+
+esp8266:
+  board: esp01_1m
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "OJtJ2y+plqjqYjFf3KVfWxxthKkOOEDdj7VUm2n9CEk="
+
+ota:
+  password: "f81259a624d15be40d71c0a1468af25c"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Aht10-Cave Fallback Hotspot"
+    password: "PgG108gF2s2y"
+
+captive_portal:
+    

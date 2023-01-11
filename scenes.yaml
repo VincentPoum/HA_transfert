@@ -1,0 +1,69 @@
+- id: '1672088995744'
+  name: 'Tout fermer '
+  entities:
+    switch.chambre_basse_switch_1:
+      device_class: outlet
+      friendly_name: Chambre basse Switch 1
+      state: 'off'
+    switch.chambre_basse_switch_2:
+      device_class: outlet
+      friendly_name: Chambre basse Switch 2
+      state: 'off'
+    switch.chambre_basse_switch_3:
+      device_class: outlet
+      friendly_name: Chambre basse Switch 3
+      state: 'off'
+    switch.eclairage_cuisine:
+      current: false
+      raw_state: false
+      friendly_name: Eclairage cuisine
+      state: 'off'
+    switch.cuisine_travail_switch_1:
+      device_class: outlet
+      friendly_name: Cuisine travail  Switch 1
+      state: 'off'
+    switch.cuisine_travail_switch_2:
+      device_class: outlet
+      friendly_name: Cuisine travail  Switch 2
+      state: 'off'
+    switch.cuisine_travail_switch_3:
+      device_class: outlet
+      friendly_name: Cuisine travail  Switch 3
+      state: 'off'
+    switch.cuisine_evier_switch_1:
+      device_class: outlet
+      friendly_name: Cuisine évier  Switch 1
+      state: 'off'
+    switch.salon_cuisine_switch_1:
+      device_class: outlet
+      friendly_name: Salon/Cuisine  Switch 1
+      state: 'off'
+    switch.salon_cuisine_switch_2:
+      device_class: outlet
+      friendly_name: Salon/Cuisine  Switch 2
+      state: 'off'
+  icon: mdi:ceiling-light-multiple-outline
+  metadata: {}
+- id: '1672246732956'
+  name: Lum Cuisine cool
+  entities:
+    switch.cuisine_travail_switch_2:
+      device_class: outlet
+      friendly_name: Cuisine travail  Switch 2
+      state: 'on'
+    switch.cuisine_evier_switch_1:
+      device_class: outlet
+      friendly_name: Cuisine évier  Switch 1
+      state: 'on'
+    switch.salon_cuisine_switch_1:
+      device_class: outlet
+      friendly_name: Salon/Cuisine  Switch 1
+      state: 'on'
+  icon: mdi:candelabra
+  metadata:
+    switch.cuisine_travail_switch_2:
+      entity_only: true
+    switch.cuisine_evier_switch_1:
+      entity_only: true
+    switch.salon_cuisine_switch_1:
+      entity_only: true
